@@ -4,21 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPA-Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
   </head>
   <body>
-    <header>GPA Calculator</header>
-    <!-- A = 5, B = 4, C = 3, D = 2, E = 1, F = 0 -->
-    <!-- |  course-title | |   course-unit |        |  score  |    | Grade |  | Point = unit*gradepoint | -->
-    <!-- |  Math         | |    5          |        |  80     |    |  A    |  | 5 x 5     | -->
-    <!-- |  Phy          | |    4          |        |  75     |    |  A    |  | 4 x 5     | -->
-    <!-- |  Chm          | |    4          |        |  77     |    |  A    |  | 4 x 5     | -->
-    <!-- |  Bio          | |    4          |        |  79     |    |  A    |  | 4 x 5     | -->
-    <!-- |  Eng          | |    3          |        |  60     |    |  B    |  | 3 x 4     | -->
-    <!-- |  Sta          | |    2          |        |  60     |    |  B    |  | 2 x 4     | -->
-  
-  
-    <!-- Cummulative Total Units = value(22) -->
-    <!-- Cummulative Total Points = value(105) -->
-    <!-- Cummulative Grade Point Average = value (C.T.P/C.T.U) 105/22 = 4.77-->
+    <div class="container">
+      <header>GPA Calculator</header>
+      <div class="gpa-instructions"></div>
+      <form>
+        <div class="form-wrapper">
+          <div class="form-field"></div>
+          <h4>
+            Cummulative Total Units <span class="las la-equals"></span>
+            <span id="t-units"></span>
+          </h4>
+          <h4>
+            Cummulative Total Points <span class="las la-equals"></span>
+            <span id="t-points"></span>
+          </h4>
+          <h4>
+            Cummulative Grade Point Average <span class="las la-equals"></span>
+            <span id="g-point-average"></span>
+          </h4>
+        </div>
+        <button id="add-course" class="new-course">
+          <span class="las la-plus"></span>Add Course
+        </button>
+        <button id="clear-field"><span class="las la-trash-alt"></span>Clear Field</button>
+      </form>
+    </div>
   </body>
 </html>
