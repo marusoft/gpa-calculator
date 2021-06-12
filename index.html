@@ -4,27 +4,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
   <title>GPA CALCULATOR</title>
 </head>
 
 <body>
   <div class="container">
-    <h3>Grading System</h3>
+    <h3>GPA Calculator</h3>
     <div class="grading-system">
       <input type="text" maxlength="2" placeholder="Grade (A, B, ...)" id="grade" required>
       <input type="number" placeholder="Point" id="point" required>
       <input type="number" placeholder="min-score" id="min-score" required>
+      <br />
       <button id="create">Create</button>
       <table id="grade-system" border="1"></table>
     </div>
 
-    <h3>Academic Session</h3>
+    <div class="session">
+      <h3>Academic Session</h3>
     <div class="academic-session">
       <input type="number" maxlength="4" class="year" placeholder="Year">
       <input type="number" maxlength="1" max="3" class="semester" placeholder="Semester">
 
-      <h3>Courses</h3>
+      <h3 class="courses">Courses</h3>
       <div class="course-grades">
         <input type="text" placeholder="Course" class="course">
         <input type="number" placeholder="Unit" class="course-unit">
@@ -33,6 +35,7 @@
       </div>
 
       <button id="submit">Submit</button>
+    </div>
     </div>
 
     <div class="academic-result">
