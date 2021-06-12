@@ -1,6 +1,8 @@
 # gpa-calculator
 A simple HTML, CSS and JavaScript Grade Point average calculator.
 
+# Demo link
+(https://marusoft.github.io/gpa-calculator/)[https://marusoft.github.io/gpa-calculator/]
 
 <!-- A = 5, B = 4, C = 3, D = 2, E = 1, F = 0 -->
     <!-- |  course-title | |   course-unit |        |  score  |    | Grade |  | Point = unit*gradepoint | -->
