@@ -1,6 +1,6 @@
 const moreCourseBtn = document.querySelector("#create-course");
 const clearAllFieldBtn = document.querySelector("#clear-all-field");
-const totalUnits = document.querySelector("#t-units");
+let totalUnits = document.querySelector("#t-units");
 const totalPoints = document.querySelector("#t-points");
 const gradePointAverage = document.querySelector("#grade-point-average");
 const courseForm = document.querySelector(".form-field");
@@ -56,7 +56,7 @@ const newCourseForm = (event) => {
         <input type ="text" class = "course" id = "course${i}" required placeholder = "Enter Course" />
       </li>
       <li>
-        <input type ="number" class = "unit" id = "unit${i}" required placeholder = "Enter Course Unit" />
+        <input type ="number" class="unit" id="unit${i}" required placeholder = "Enter Course Unit" />
       </li>
       <li>
        <input type ="number" class = "score" id = "score${i}" required placeholder = "Enter Score" />
@@ -93,6 +93,9 @@ const newCourseForm = (event) => {
 };
 moreCourseBtn.addEventListener("click", newCourseForm);
 
+
+
+
 const totalPoint = (event) => {
   event.preventDefault();
   moreCourseBtn.disabled = true;
@@ -103,17 +106,12 @@ const totalPoint = (event) => {
   let grade = document.querySelector(`#grade${i}`).value.trim();
 
 
-  let totalUnits = 0;
-  let totalPoints = 0;
-  let gradePointAverage = 0;
-
-
   const point = courseUnit * gradePoint;
-  const cummulativeGradePointAverage = totalPoint / totalUnits
-
-  const totalUnitsArray = document.querySelectorAll(".unit");
   const totalPointsArray = document.querySelectorAll(".total-point");
+  let totalPoints = 0;
 
+  // let gradePointAverage = 0;
+  // const cummulativeGradePointAverage = totalPoint / totalUnits
 
 
   const validateCourse = /^([A-Za-z0-9- ]){2,30}$/.test(course);
@@ -124,6 +122,7 @@ const totalPoint = (event) => {
     document.querySelector(`#total-point${i}`).setAttribute("value", "");
     moreCourseBtn.disabled = true;
     moreCourseBtn.removeAttribute("style");
+
 
     for (let j = 0; j < totalPointsArray.length; j++) {
       if (parseFloat(totalPointsArray[j].value))
@@ -140,13 +139,40 @@ const totalPoint = (event) => {
     clearAllFieldBtn.style.background = '#cc0000'
     clearAllFieldBtn.style.color = '#fff';
 
+  
     for (let j = 0; j < totalPointsArray.length; j++) {
       if (parseFloat(totalPointsArray[j].value))
       totalPoints += parseFloat(totalPointsArray[j].value);
     }
     document.querySelector("#t-points").innerHTML = totalPoints.toFixed(2);
 };
-document.addEventListener('keyup', totalPoint);
+document.addEventListener('input', totalPoint);
+
+let tUnit = 0;
+const totalUnit = (event) => {
+  event.preventDefault();
+  moreCourseBtn.disabled = true;
+  // let courseUnit = document.querySelector(`#unit${i}`).value.trim();
+  
+  const totalUnitsArray = document.querySelectorAll(".unit");
+  
+
+
+    for (let k = 0; k < totalUnitsArray.length; k++) {
+      if (parseFloat(totalUnitsArray[k].value))
+      tUnit += parseFloat(totalUnitsArray[k].value);
+    }
+    document.querySelector("#t-units").innerHTML = tUnit.toFixed(2);
+    
+    moreCourseBtn.disabled = false;
+    moreCourseBtn.style.background = '#00994d';
+    moreCourseBtn.style.color = '#fff';
+    clearAllFieldBtn.disabled = false;
+    clearAllFieldBtn.style.background = '#cc0000'
+    clearAllFieldBtn.style.color = '#fff';
+
+};
+document.addEventListener('keyup', totalUnit);
 
 
 clearAllFieldBtn.addEventListener('click', loadGpaCalculator);
