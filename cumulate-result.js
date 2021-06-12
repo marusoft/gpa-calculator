@@ -95,12 +95,12 @@ const results = (e) => {
     cumulativePoints += totalSessionPoint;
   }
 
-  const cumulativeGPA = Number(cumulativePoints / cumulativeUnits);
+  const cumulativeGPA = Number(cumulativePoints / cumulativeUnits) || 0;
   const cumulativeGPADiv = document.createElement('div');
   cumulativeGPADiv.innerHTML = `
-    <h2>Cumulative Result</h2>
-    <div>Cumulative Unit = ${cumulativeUnits.toFixed(2)}</div>
-    <div>Cumulative Point = ${cumulativePoints.toFixed(2)}</div>
+    <h3>Cumulative Result</h3>
+    <div>Cumulative Total Unit = ${cumulativeUnits.toFixed(2)}</div>
+    <div>Cumulative Total Point = ${cumulativePoints.toFixed(2)}</div>
     <div>Cumulative GPA = ${cumulativeGPA.toFixed(2)}</div>
   `;
 
