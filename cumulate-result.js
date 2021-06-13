@@ -99,9 +99,9 @@ const results = (e) => {
   const cumulativeGPA = Number(cumulativePoints / cumulativeUnits) || 0;
   const cumulativeGPADiv = document.createElement('div');
   cumulativeGPADiv.innerHTML = `
-    <div>Cumulative Total Unit = ${cumulativeUnits.toFixed(2)}</div>
-    <div>Cumulative Total Point = ${cumulativePoints.toFixed(2)}</div>
-    <div>Cumulative GPA = ${cumulativeGPA.toFixed(2)}</div>
+    <div>Cumulative Total Units = ${cumulativeUnits.toFixed(2)}</div>
+    <div>Cumulative Total Points = ${cumulativePoints.toFixed(2)}</div>
+    <div>Cumulative Grade Point Average = ${cumulativeGPA.toFixed(2)}</div>
   `;
 
   resultsContainer.appendChild(cumulativeGPADiv);

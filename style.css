@@ -1,58 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 350;
 }
-body{
-background-color: #F9F9F9;
+body {
+  background-color: #ffffff;
 }
 .container {
-  text-align: center;
-  margin-top: 2rem;
-}
-.grading-system, .session, .course-grades{
-  margin: 1.5rem;
-}
-input{
-  outline: none;
-}
-.academic-result h3 {
-  margin-top: 1rem;
-}
-.session{
   margin-top: 1.1rem;
 }
-.courses{
-  margin-top: 1.5rem;
+h3 {
+  margin-left: 1.1rem;
+  color: #03a9f4;
+  letter-spacing: 0.3rem;
 }
-#create, #reset, #submit{
+.grading-system {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0.8rem;
+  gap: 1.2rem;
+  max-width: 150px;
+  margin-left: 1.1rem;
+}
+.create-section table {
+  margin-left: 1.1rem;
+  color: #03a9f4;
+}
+.results table {
+  border: 1px solid #333333;
+  color: #03a9f4;
+}
+.academic-result h3 {
+  margin-top: .6rem;
+}
+.create-section button {
+  margin-bottom: 0.4rem;
+}
+.academic-session input {
+  margin-top: .7rem;
+  margin-left: 1.1rem;
+}
+input {
+  outline: none;
+  padding: 0.4rem;
+  border: 1px solid #03a9f4;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+.courses{
   margin-top: 1rem;
-  font-size: .8rem;
+}
+.results{
+  margin-left: 1.1rem;
+  color: #333333;
+}
+#create,
+#reset,
+#submit {
+  margin-top: 0.6rem;
+  font-size: 1rem;
   text-transform: capitalize;
   cursor: pointer;
-  font-weight: bolder;
   color: #ffffff;
-  background: #023bf5;
+  background: #03a9f4;
   width: 100px;
   border-radius: 5px;
   border: none;
-  padding: .3rem;
+  padding: 0.5rem;
+  margin-left: 1.2rem;
 }
 #create span {
-  font-size: .87rem;
-  margin-right: .3rem;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
 }
 #submit span {
-  font-size: .87rem;
-  margin-right: .3rem;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
 }
 #reset span {
-  font-size: .87rem;
-  margin-right: .3rem;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
 }
 #reset {
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }

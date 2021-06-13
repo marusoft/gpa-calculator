@@ -11,14 +11,17 @@
 
 <body>
   <div class="container">
-    <h3>GPA Calculator</h3>
-    <div class="grading-system">
-      <input type="text" maxlength="2" placeholder="Grade (A, B, C,...)" id="grade" required>
-      <input type="number" placeholder="Point (A = 5, B = 4, ...)" id="point" required>
-      <input type="number" placeholder="min-score" id="min-score" required>
-      <br />
-      <button id="create"><span class="las la-plus"></span>Create</button>
-      <table id="grade-system" border="1"></table>
+    <div>
+      <h3>GPA Calculator</h3>
+      <div class="grading-system">
+        <input type="text" maxlength="2" placeholder="Grade (A, B, C,...)" id="grade" required>
+        <input type="number" placeholder="Point (A = 5, B = 4, ...)" id="point" required>
+        <input type="number" placeholder="min-score e.g 'A' mini-score = 75 " id="min-score" required>
+      </div>
+      <div class="create-section">
+        <button id="create"><span class="las la-plus"></span>Create</button>
+        <table id="grade-system" border="1"></table>
+      </div>
     </div>
 
     <div class="session">
@@ -34,7 +37,6 @@
         <input type="text" maxlength="2" placeholder="Grade" class="course-grade">
         <input type="number" placeholder="Score" class="score">
       </div>
-      
       <button id="submit"><span class="las la-arrow-circle-right"></span>Submit</button>
     </div>
     </div>
