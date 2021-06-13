@@ -21,6 +21,19 @@ const submitResult = (e) => {
     return alert('Course, Course Unit, and Course Grade are required');
   }
 
+  const gradeSys = JSON.parse(localStorage.getItem('gradeSystem'));
+  if (gradeSys[courseGrade] === undefined) {
+    return alert(`Grade ${courseGrade} does not exist in your grading system`)
+  }
+
+  if(score){
+    const minScore = gradeSys[courseGrade].minScore;
+    if(score < minScore){
+      return alert(`Minimum score of grade ${courseGrade} is ${minScore}`)
+    }
+  }
+
+
   const academicGrades = JSON.parse(localStorage.getItem('annualGrades')) || {};
   const semesterDetails = {};
 
