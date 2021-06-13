@@ -13,7 +13,7 @@ body {
 .container {
   margin-top: 1.1rem;
 }
-h3 {
+h3, p {
   margin-left: 1.1rem;
   color: #03a9f4;
   letter-spacing: 0.3rem;
@@ -87,4 +87,26 @@ input {
 }
 #reset {
   margin-bottom: 1.4rem;
+}
+
+@media screen and (max-width: 769px){
+  .grading-system {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0.8rem;
+    gap: 1.2rem;
+    max-width: 150px;
+    margin-left: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 912px){
+  .grading-system {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.8rem;
+    gap: 1.2rem;
+    max-width: 150px;
+    margin-left: 1.1rem;
+  }
 }
