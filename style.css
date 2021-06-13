@@ -89,21 +89,22 @@ input {
   margin-bottom: 1.4rem;
 }
 
-@media screen and (max-width: 769px){
+/* media query */
+
+@media screen and (max-width: 912px){
   .grading-system {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0.8rem;
     gap: 1.2rem;
     max-width: 150px;
     margin-left: 1.1rem;
   }
 }
-
-@media screen and (max-width: 912px){
+@media screen and (max-width: 610px){
   .grading-system {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: 0.8rem;
     gap: 1.2rem;
     max-width: 150px;
